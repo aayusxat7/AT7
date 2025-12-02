@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | Aayush-Tech07</title>
+    <meta name="description" content="Meet the elite team of neural operatives at Aayush-Tech07.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f3ff">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/techno.jpg" type="image/jpeg">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <canvas id="matrix-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="glass-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/techno.jpg" alt="Logo" class="logo-icon-img">
+                <span>AAYUSH</span><span style="font-weight: 300; opacity: 0.8;">TECH07</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="members.html" class="nav-link active">Members</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Members Section -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Neural Operatives</h2>
+                <p class="section-subtitle">The elite agents of the Cyber Matrix.</p>
+            </div>
+
+            <!-- Commander -->
+            <div class="commander-card tech-card">
+                <div class="commander-img-wrapper">
+                    <img src="assets/images/my.jpg" alt="Neural Commander" class="commander-img">
+                    <div class="ring"></div>
+                </div>
+                <div class="commander-info">
+                    <h3>AAYUSH BHANDARI</h3>
+                    <p class="role">Neural Commander & Founder</p>
+                    <p class="bio">Lead architect of the cyber matrix, specializing in quantum neural networks and
+                        holographic interface development.</p>
+                    <div class="stats">
+                        <div class="stat"><span>∞</span> Capacity</div>
+                        <div class="stat"><span>100%</span> Sync</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agents Grid -->
+            <div class="grid-3 members-grid">
+                <div class="tech-card member-card">
+                    <div class="member-img">
+                        <img src="assets/images/1member.jpg" alt="Agent Alpha">
+                        <div class="member-overlay">
+                            <h4>Agent Alpha</h4>
+                            <p>Quantum Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-card member-card">
+                    <div class="member-img">
+                        <img src="assets/images/2member.jpg" alt="Agent Beta">
+                        <div class="member-overlay">
+                            <h4>Agent Beta</h4>
+                            <p>Holographic Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-card member-card">
+                    <div class="member-img">
+                        <img src="assets/images/3member.jpg" alt="Agent Gamma">
+                        <div class="member-overlay">
+                            <h4>Agent Gamma</h4>
+                            <p>Cyber Security</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-card member-card">
+                    <div class="member-img">
+                        <img src="assets/images/4member.jpg" alt="Agent Delta">
+                        <div class="member-overlay">
+                            <h4>Agent Delta</h4>
+                            <p>Neural Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-card member-card">
+                    <div class="member-img">
+                        <img src="assets/images/5member.jpg" alt="Agent Epsilon">
+                        <div class="member-overlay">
+                            <h4>Agent Epsilon</h4>
+                            <p>Data Analyst</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-card member-card">
+                    <div class="member-img">
+                        <img src="assets/images/6member.jpg" alt="Agent Zeta">
+                        <div class="member-overlay">
+                            <h4>Agent Zeta</h4>
+                            <p>Interface Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Switcher UI -->
+    <div class="theme-switcher">
+        <button class="theme-toggle" onclick="toggleThemePanel()">
+            <i class="fas fa-cog fa-spin"></i>
+        </button>
+        <div class="theme-panel" id="theme-panel">
+            <h3>SYSTEM THEME</h3>
+            <div class="theme-options">
+                <button class="theme-btn" onclick="setTheme('deep-space')"
+                    style="background: #00f3ff; border-color: #00f3ff;" title="Deep Space"></button>
+                <button class="theme-btn" onclick="setTheme('red-alert')"
+                    style="background: #ff0000; border-color: #ff0000;" title="Red Alert"></button>
+                <button class="theme-btn" onclick="setTheme('void')" style="background: #ffffff; border-color: #ffffff;"
+                    title="The Void"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>AAYUSH-TECH07</h3>
+                    <p>Innovating the digital frontier.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Aayushkin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aayush-tech07" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:bhandariaayush07@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aayush Bhandari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

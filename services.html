@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Aayush-Tech07</title>
+    <meta name="description"
+        content="Explore the futuristic services offered by Aayush-Tech07, including Web Development, UI/UX Design, and Cyber Security.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f3ff">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/techno.jpg" type="image/jpeg">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <canvas id="matrix-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="glass-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/techno.jpg" alt="Logo" class="logo-icon-img">
+                <span>AAYUSH</span><span style="font-weight: 300; opacity: 0.8;">TECH07</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="members.html" class="nav-link">Members</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Quantum solutions for your digital needs.</p>
+            </div>
+            <div class="grid-3">
+                <div class="tech-card service-card">
+                    <div class="service-icon" style="color: #00f3ff;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, high-performance websites using the latest technologies.</p>
+                </div>
+                <div class="tech-card service-card">
+                    <div class="service-icon" style="color: #bc13fe;">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and visually stunning user interfaces for seamless experiences.</p>
+                </div>
+                <div class="tech-card service-card">
+                    <div class="service-icon" style="color: #00ff9d;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cyber Security</h3>
+                    <p>Protecting your digital assets with advanced security protocols and audits.</p>
+                </div>
+                <div class="tech-card service-card">
+                    <div class="service-icon" style="color: #ff0055;">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Developing cross-platform mobile applications for iOS and Android.</p>
+                </div>
+                <div class="tech-card service-card">
+                    <div class="service-icon" style="color: #ffcc00;">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Boosting your online visibility and ranking on search engines.</p>
+                </div>
+                <div class="tech-card service-card">
+                    <div class="service-icon" style="color: #00ccff;">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game Design</h3>
+                    <p>Creating immersive and interactive gaming experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Switcher UI -->
+    <div class="theme-switcher">
+        <button class="theme-toggle" onclick="toggleThemePanel()">
+            <i class="fas fa-cog fa-spin"></i>
+        </button>
+        <div class="theme-panel" id="theme-panel">
+            <h3>SYSTEM THEME</h3>
+            <div class="theme-options">
+                <button class="theme-btn" onclick="setTheme('deep-space')"
+                    style="background: #00f3ff; border-color: #00f3ff;" title="Deep Space"></button>
+                <button class="theme-btn" onclick="setTheme('red-alert')"
+                    style="background: #ff0000; border-color: #ff0000;" title="Red Alert"></button>
+                <button class="theme-btn" onclick="setTheme('void')" style="background: #ffffff; border-color: #ffffff;"
+                    title="The Void"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>AAYUSH-TECH07</h3>
+                    <p>Innovating the digital frontier.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Aayushkin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aayush-tech07" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:bhandariaayush07@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aayush Bhandari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

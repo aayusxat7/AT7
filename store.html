@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Aayush Bhandari</title>
+    <meta name="description" content="Purchase premium website packages from Aayush-Tech07. Starting at NPR 5,000.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f3ff">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/techno.jpg" type="image/jpeg">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .pricing-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 15px;
+        }
+
+        .toggle-label {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: .4s;
+            border-radius: 34px;
+            border: 1px solid var(--primary);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 3px;
+            background-color: var(--primary);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: rgba(0, 243, 255, 0.2);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .price-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .price-amount {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+
+        .price-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+            flex-grow: 1;
+        }
+
+        .price-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <canvas id="matrix-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="glass-header minimal-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/techno.jpg" alt="Logo" class="logo-icon-img">
+                <span class="logo-text">Aayush Bhandari</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="store.html" class="nav-link active highlight">Store</a>
+                <a href="projects.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Store Section -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Digital Packages</h2>
+                <p class="section-subtitle">Invest in your digital future. Simple pricing, powerful results.</p>
+            </div>
+
+            <!-- Currency Toggle -->
+            <div class="pricing-toggle">
+                <span class="toggle-label" style="opacity: 1;">NPR</span>
+                <label class="switch">
+                    <input type="checkbox" id="currency-toggle" onchange="toggleCurrency()">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label" style="opacity: 0.7;">USD</span>
+            </div>
+
+            <div class="grid-3">
+                <!-- Starter Package -->
+                <div class="tech-card price-card">
+                    <h3>Starter Presence</h3>
+                    <div class="price-amount" data-npr="Rs. 5,000" data-usd="$37">Rs. 5,000</div>
+                    <p>Perfect for personal blogs and portfolios.</p>
+                    <ul class="price-features">
+                        <li>Responsive Design</li>
+                        <li>3 Pages</li>
+                        <li>Basic SEO</li>
+                        <li>Contact Form</li>
+                        <li>1 Month Support</li>
+                    </ul>
+                    <a href="contact.html?plan=starter" class="btn btn-outline">Select Plan</a>
+                </div>
+
+                <!-- Professional Package -->
+                <div class="tech-card price-card"
+                    style="border-color: var(--primary); background: rgba(0, 243, 255, 0.05);">
+                    <div
+                        style="position: absolute; top: 0; right: 0; background: var(--primary); color: #000; padding: 5px 15px; font-weight: bold; font-size: 0.8rem;">
+                        POPULAR</div>
+                    <h3>Business Pro</h3>
+                    <div class="price-amount" data-npr="Rs. 50,000" data-usd="$370">Rs. 50,000</div>
+                    <p>For businesses ready to scale.</p>
+                    <ul class="price-features">
+                        <li>Dynamic Content</li>
+                        <li>10 Pages</li>
+                        <li>Advanced SEO</li>
+                        <li>CMS Integration</li>
+                        <li>6 Months Support</li>
+                    </ul>
+                    <a href="contact.html?plan=pro" class="btn btn-primary">Select Plan</a>
+                </div>
+
+                <!-- Enterprise Package -->
+                <div class="tech-card price-card">
+                    <h3>Enterprise Elite</h3>
+                    <div class="price-amount" data-npr="Rs. 150,000" data-usd="$1,110">Rs. 150,000</div>
+                    <p>Full-scale digital transformation.</p>
+                    <ul class="price-features">
+                        <li>Custom Web App</li>
+                        <li>Unlimited Pages</li>
+                        <li>E-commerce Ready</li>
+                        <li>Priority 24/7 Support</li>
+                        <li>Lifetime Updates</li>
+                    </ul>
+                    <a href="contact.html?plan=enterprise" class="btn btn-outline">Select Plan</a>
+                </div>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="tech-card" style="margin-top: 50px; text-align: center;">
+                <h3><i class="fas fa-lock"></i> Secure Transaction</h3>
+                <p>We accept payments via direct bank transfer.</p>
+                <p>Please contact us directly to initiate a secure transaction.</p>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>AAYUSH BHANDARI</h3>
+                    <p>Digitalizing Your Dreams.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Aayushkin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aayush-tech07" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:bhandariaayush07@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aayush Bhandari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function toggleCurrency() {
+            const isUSD = document.getElementById('currency-toggle').checked;
+            const prices = document.querySelectorAll('.price-amount');
+
+            prices.forEach(price => {
+                if (isUSD) {
+                    price.innerText = price.getAttribute('data-usd');
+                } else {
+                    price.innerText = price.getAttribute('data-npr');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

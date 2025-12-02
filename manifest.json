@@ -1,0 +1,21 @@
+{
+  "name": "Aayush-Tech07 | Cyber Matrix",
+  "short_name": "AayushTech",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#00f3ff",
+  "description": "Advanced Cyber Matrix Portfolio",
+  "icons": [
+    {
+      "src": "assets/images/techno.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/images/techno.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

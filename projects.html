@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Aayush-Tech07</title>
+    <meta name="description"
+        content="Showcase of Aayush-Tech07's innovative projects, including games, web apps, and tools.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f3ff">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/techno.jpg" type="image/jpeg">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <canvas id="matrix-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="glass-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/techno.jpg" alt="Logo" class="logo-icon-img">
+                <span>AAYUSH</span><span style="font-weight: 300; opacity: 0.8;">TECH07</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="members.html" class="nav-link">Members</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Database</h2>
+                <p class="section-subtitle">Accessing classified portfolio archives.</p>
+            </div>
+            <div class="grid-3">
+                <!-- Project 1 -->
+                <div class="tech-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/game1.png" alt="Magic Memory Game" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://aayushkin.github.io/game/" target="_blank"
+                                class="btn btn-primary">Launch</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Magic Memory Game</h3>
+                        <p>Animated memory game with neon effects. Built with JavaScript and CSS3.</p>
+                        <div class="project-tags">
+                            <span>JS</span>
+                            <span>Game</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="tech-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/techno.jpg" alt="Interactive Portfolio" class="project-img">
+                        <div class="project-overlay">
+                            <a href="about.html" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Interactive Portfolio</h3>
+                        <p>This portfolio! Designed with Sci-Fi HUD aesthetics, PWA support, and interactive JS.</p>
+                        <div class="project-tags">
+                            <span>PWA</span>
+                            <span>Sci-Fi</span>
+                            <span>Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="tech-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/typing.png" alt="Debugging Playground" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://aayush-tech07.website/blog" target="_blank"
+                                class="btn btn-primary">Access</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Debugging Playground</h3>
+                        <p>Test and debug code in real-time with this interactive web tool.</p>
+                        <div class="project-tags">
+                            <span>Tool</span>
+                            <span>Debug</span>
+                            <span>Web</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Switcher UI -->
+    <div class="theme-switcher">
+        <button class="theme-toggle" onclick="toggleThemePanel()">
+            <i class="fas fa-cog fa-spin"></i>
+        </button>
+        <div class="theme-panel" id="theme-panel">
+            <h3>SYSTEM THEME</h3>
+            <div class="theme-options">
+                <button class="theme-btn" onclick="setTheme('deep-space')"
+                    style="background: #00f3ff; border-color: #00f3ff;" title="Deep Space"></button>
+                <button class="theme-btn" onclick="setTheme('red-alert')"
+                    style="background: #ff0000; border-color: #ff0000;" title="Red Alert"></button>
+                <button class="theme-btn" onclick="setTheme('void')" style="background: #ffffff; border-color: #ffffff;"
+                    title="The Void"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>AAYUSH-TECH07</h3>
+                    <p>Innovating the digital frontier.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Aayushkin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aayush-tech07" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:bhandariaayush07@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aayush Bhandari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
